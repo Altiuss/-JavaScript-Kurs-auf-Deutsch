@@ -15,7 +15,7 @@ personen[1] = "Pia";
 
 console.log(personen);
 
-
+//push darbība: Tā maina jau esošo masīva datu struktūru, pievienojot jaunu elementu pēdējā vietā.
 personen.push("Max");
 
 console.log(personen);
