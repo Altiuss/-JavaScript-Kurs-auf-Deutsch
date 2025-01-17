@@ -25,4 +25,4 @@ let zahlen = [12, 23, 34, 45, 56, 67, 78, 89, 90, 11];
 
 // zahlen.forEach(meineFunkcion);
 
-console.log(zahlen.forEach(f(e)));
+
