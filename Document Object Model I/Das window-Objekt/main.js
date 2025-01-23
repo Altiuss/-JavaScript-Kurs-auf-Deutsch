@@ -13,3 +13,19 @@ console.log(scrollY);
 console.log(location);
 console.log(localStorage);
 console.log(sessionStorage);
+
+// alert("ACHTUNG");
+
+let bet = confirm("Bist du dir sicher?");
+console.log(bet);
+
+
+// prompt("Wie geht es dir?");
+
+// print();
+// open("https://www.google.de");
+close();
+
+let nav = document.querySelector("#navigation");
+let nav_styles = getComputedStyle(nav);
+console.log(nav_styles);
