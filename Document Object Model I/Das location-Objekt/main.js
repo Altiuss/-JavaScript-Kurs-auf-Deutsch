@@ -16,5 +16,5 @@ console.log(location.hash);
 
 // location.assign("http://www.google.com");
 
-location.replace("http://www.google.com");
+// location.replace("http://www.google.com");
 
