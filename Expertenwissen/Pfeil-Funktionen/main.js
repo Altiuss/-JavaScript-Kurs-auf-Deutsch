@@ -31,5 +31,5 @@ let einkaufsliste = [
     "Orangesaft"
 ];
 
-einkaufsliste.forEach(function(e) {console.log(e)});
+einkaufsliste.forEach(function(e) {console.log(e); });
 einkaufsliste.forEach(e => console.log(e));
