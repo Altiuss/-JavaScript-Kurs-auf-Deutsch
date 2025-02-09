@@ -64,8 +64,8 @@ let farbe = "rosa";
 
 
 
-console.log(farbe === "rot" ? "Ich mag rot!" : 
-    farbe === "blau" ? "Blau finde ich auch gut!" : 
-    farbe === "grun" ? "Grun mag ich nicht" : 
-    `Zur Farbe ${farbe} habe ich keine meinung`);
+console.log(farbe === "rot" ? "Ich mag rot!" :
+    farbe === "blau" ? "Blau finde ich auch gut!" :
+        farbe === "grun" ? "Grun mag ich nicht" :
+            `Zur Farbe ${farbe} habe ich keine meinung`);
 
