@@ -16,5 +16,7 @@ let konto = {
     }
 };
 
-console.log(konto);
+
+let k = new Konto("DE6206752564419854", "Max Mustermann", 3500);
+console.log(k);
 
