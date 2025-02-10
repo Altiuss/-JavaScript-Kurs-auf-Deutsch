@@ -28,6 +28,7 @@ let kk = new Kinderkonto("DE6206752564419777", "Mona Mustermann", 250, 500);
 k.einzahlen(1500);
 k.abheben(5000)
 console.log(k.kontostand_abfragen())
-console.log(k.saldo);
-console.log(k)
+console.log(kk)
+kk.abheben(1000);
+// console.log(k)
 console.log(kk)
