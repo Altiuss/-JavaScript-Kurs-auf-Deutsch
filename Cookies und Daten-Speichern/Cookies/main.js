@@ -32,11 +32,43 @@ set_cookie("zahlen", "45678", 60*60)
 const delete_cookie = function(name) {
     document.cookie = `${encodeURIComponent(name)}=; max-age=-1`;
 }
+//   ein key-value-paar=key=value; ein%20key%3B%20value-paare; ein%20key%3B%20value-paare=key%3Dvalue;
+ //  vorname=Aigars; nacname=ALutis; 10s_cookie=; mein_alter=49; passwort=%40%23%24%25%24%25%5E%5EHHGG*88; zahlen=45678
 
-delete_cookie("zahlen");
-delete_cookie("vorname");
-delete_cookie("passwort");
-delete_cookie("nacname");
-delete_cookie("mein_alter");
+//   ['ein key-value-paar=key=value', ' ein%20key%3B%20value-paare', ' ein%20key%3B%20value-paare=key%3Dvalue', 
+// ' vorname=Aigars',' nacname=ALutis', ' mein_alter=49', ' passwort=%40%23%24%25%24%25%5E%5EHHGG*88', ' 10s_cookie=', ' zahlen=45678']
+
+// delete_cookie("zahlen");
+// delete_cookie("vorname");
+// delete_cookie("passwort");
+// delete_cookie("nacname");
+// delete_cookie("mein_alter");
+
+const get_cookie = function(name) {
+    let cookie_array = document.cookie.split(";")
+    console.log(cookie_array);
+    let regex = new RegExp(`^\\s?${encodeURIComponent(name)}=`);
+    for(let cookie of cookie_array) {
+        if(cookie.match(regex)) {
+            return decodeURIComponent(cookie.replace(regex, ""));
+        }
+    }
+}
+
+console.log(get_cookie("passwort"));
+
+const has_cookie = function(name) {
+    let cookie_array = document.cookie.split(";")
+    console.log(cookie_array);
+    let regex = new RegExp(`^\\s?${encodeURIComponent(name)}=`);
+    for(let cookie of cookie_array) {
+        if(cookie.match(regex)) {
+            return true;
+        }
+    }
+    return false;
+}
+
+console.log(has_cookie("vornam"));
 
 console.log(document.cookie);
