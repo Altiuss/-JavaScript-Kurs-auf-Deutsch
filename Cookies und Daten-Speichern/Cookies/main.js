@@ -26,4 +26,17 @@ const set_cookie = function(name, wert, haltbarkeit){
 
 set_cookie("passwort", "@#$%$%^^HHGG*88", 60*60*2);
 
-// console.log(document.cookie);
+set_cookie("zahlen", "1234", 60*60)
+set_cookie("zahlen", "45678", 60*60)
+
+const delete_cookie = function(name) {
+    document.cookie = `${encodeURIComponent(name)}=; max-age=-1`;
+}
+
+delete_cookie("zahlen");
+delete_cookie("vorname");
+delete_cookie("passwort");
+delete_cookie("nacname");
+delete_cookie("mein_alter");
+
+console.log(document.cookie);
